@@ -1,5 +1,5 @@
-require_relative '../../lib/models/receipt'
-require_relative '../../lib/models/receipt_item'
+require_relative '../spec_helper'
+
 
 describe Receipt do
   subject(:receipt) { described_class.new }

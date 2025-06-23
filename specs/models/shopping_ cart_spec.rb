@@ -1,7 +1,4 @@
-require_relative '../../lib/models/shopping_cart'
-require_relative '../../lib/models/product_quantity'
-require_relative '../../lib/models/special_offer_type'
-require_relative '../../lib/models/discount'
+require_relative '../spec_helper'
 
 describe ShoppingCart do
   subject(:shopping_cart) { described_class.new }

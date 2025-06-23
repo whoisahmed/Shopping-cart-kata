@@ -1,11 +1,4 @@
-require_relative '../../lib/models/shopping_cart'
-require_relative '../../lib/models/product_quantity'
-require_relative '../../lib/models/special_offer_type'
-require_relative '../../lib/models/teller'
-require_relative '../../lib/models/offer'
-require_relative '../../lib/models/receipt'
-require_relative '../../lib/models/receipt_item'
-require_relative '../../lib/models/discount'
+require_relative '../spec_helper'
 
 describe Teller do
   let(:catalog) { double("Catalog") }
