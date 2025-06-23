@@ -24,4 +24,5 @@ class Teller
     receipt
   end
 
+  attr_reader :offers
 end
