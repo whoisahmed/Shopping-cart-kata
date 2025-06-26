@@ -16,8 +16,8 @@ class Receipt
     total
   end
 
-  def add_product(product, quantity, price, total_price)
-    @items << ReceiptItem.new(product, quantity, price, total_price)
+  def add_product(product, quantity, price)
+    @items << ReceiptItem.new(product, quantity, price)
     nil
   end
 

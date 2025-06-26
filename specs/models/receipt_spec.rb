@@ -6,8 +6,8 @@ describe Receipt do
 
   describe "#total_price" do
     it "returns total price of receipt items" do
-      receipt.add_product("Apple", 1, 2, 2)
-      receipt.add_product("Banana", 2, 1, 2)
+      receipt.add_product("Apple", 1, 2)
+      receipt.add_product("Banana", 2, 1)
 
       expect(receipt.total_price).to eq 4.0
     end
@@ -17,8 +17,8 @@ describe Receipt do
     end
 
     it "accounts for discounts" do
-      receipt.add_product("Apple", 1, 2, 2)
-      receipt.add_product("Banana", 2, 1, 2)
+      receipt.add_product("Apple", 1, 2)
+      receipt.add_product("Banana", 2, 1)
 
       discount = Struct.new(:discount_amount)
       receipt.add_discount(discount.new(2.0))
@@ -29,7 +29,7 @@ describe Receipt do
 
   describe "#add_product" do    
     it "adds product to receipt items" do
-      receipt.add_product("Apple", 1, 2, 3)
+      receipt.add_product("Apple", 1, 2)
 
       expect(receipt.items.count).to eq 1
     end
