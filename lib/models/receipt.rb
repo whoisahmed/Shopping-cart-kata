@@ -5,6 +5,8 @@ class Receipt
     @discounts = []
   end
 
+  attr_reader :items, :discounts
+
   def total_price
     total = 0.0
     for item in @items do
@@ -21,17 +23,9 @@ class Receipt
     nil
   end
 
-  def items
-    Array.new @items
-  end
-
   def add_discount(discount)
     @discounts << discount
     nil
-  end
-
-  def discounts
-    Array.new @discounts
   end
 
 end

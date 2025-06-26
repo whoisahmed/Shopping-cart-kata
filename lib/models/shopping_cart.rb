@@ -5,17 +5,11 @@ class ShoppingCart
     @product_quantities = {}
   end
 
-  def items
-    Array.new @items
-  end
+  attr_reader :items, :product_quantities
 
   def add_item(product)
     add_item_quantity(product, 1.0)
     nil
-  end
-
-  def product_quantities
-    @product_quantities
   end
 
   def add_item_quantity(product, quantity)
