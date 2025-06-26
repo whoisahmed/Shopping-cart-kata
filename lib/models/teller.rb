@@ -5,7 +5,7 @@ class Teller
     @offers = {}
   end
 
-  def add_special_offer(offer_type, product, argument)
+  def add_special_offer(offer_type:, product:, argument:)
     @offers[product] = Offer.new(offer_type, product, argument)
   end
 

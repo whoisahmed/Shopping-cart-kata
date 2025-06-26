@@ -6,7 +6,10 @@ describe Teller do
 
   describe "#add_special_offer" do
     it "adds special offer" do
-      teller.add_special_offer("Apple", SpecialOfferType::THREE_FOR_TWO, 2)
+      teller.add_special_offer(
+                    offer_type: SpecialOfferType::THREE_FOR_TWO,
+                    product: "Apple",
+                    argument: 2)
       expect(teller.offers.count).to eq 1
     end
   end
@@ -22,7 +25,9 @@ describe Teller do
       shopping_cart = ShoppingCart.new
       shopping_cart.add_item_quantity("Apple", 3)
       shopping_cart.add_item_quantity("Banana", 4)
-      teller.add_special_offer(SpecialOfferType::THREE_FOR_TWO, "Apple", 2)
+      teller.add_special_offer(offer_type: SpecialOfferType::TWO_FOR_AMOUNT,
+                                product: "Banana",  
+                                argument: 2)
 
       receipt = teller.checks_out_articles_from(shopping_cart)
 

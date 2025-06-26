@@ -14,7 +14,10 @@ describe "Supermarket Integration" do
 
     cart.add_item_quantity(apples, 2.5)
 
-    teller.add_special_offer(SpecialOfferType::TEN_PERCENT_DISCOUNT, toothbrush, 10.0)
+    teller.add_special_offer(
+      offer_type: SpecialOfferType::TEN_PERCENT_DISCOUNT,
+      product: toothbrush,
+      argument: 10.0)
   end
 
   it "applies a ten percent discount and calculates the total price" do
